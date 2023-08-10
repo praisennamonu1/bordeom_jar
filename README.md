@@ -9,21 +9,21 @@ It is called the "Boredom Jar"
 
 1. Write out a list of at least 15 things you can do when you are bored that will set your mind free or on fire.
 
-**It is best to focus on activities are not high dopamine based like social media, games or movies.**
+    **It is best to focus on activities are not high dopamine based like social media, games or movies.**
 
-That is because if you use high dopamine stuff to solve your boredom problem, you will just end up needing more and more of it until there is very little that can satisfy you and this will affect your work productivity and other areas of your life.
+    That is because if you use high dopamine stuff to solve your boredom problem, you will just end up needing more and more of it until there is very little that can satisfy you and this will affect your work productivity and other areas of your life.
 
-You can write down things like:
+    You can write down things like:
 
-- Read a chapter of xyz book
-- Explore midjourney page and play with some new ideas
-- Go for a walk.
-- Take a Bath
-- (optional) You can even take this further by avoiding any activity that requires a device.
+    - Read a chapter of xyz book
+    - Explore midjourney page and play with some new ideas
+    - Go for a walk.
+    - Take a Bath
+    - (optional) You can even take this further by avoiding any activity that requires a device.
 
 2. Determine the freiquency of each "activity".
 
-E.g. Let's say one of those activities is "take a bath" - You write it out like 5 times or more.
+    E.g. Let's say one of those activities is "take a bath" - You write it out like 5 times or more.
 
 3. Add the activities to the jar.
 
