@@ -1,18 +1,42 @@
-from flask import Flask, render_template, request, redirect, session, make_response, abort
+import os
+from flask import Flask, render_template, request, redirect, session, make_response, flash, url_for
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField
+from wtforms.validators import DataRequired
+from flask_sqlalchemy import SQLAlchemy
+
+base_dir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = '@Felicitypraise1@_'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(base_dir, 'data.sqlite')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+db = SQLAlchemy(app)
 
-@app.route('/')
-def index():
-    return render_template('index.html')
+class Role(db.Model):
+    __tablename__ = 'roles' # name of the table
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(64), unique=True)
 
-@app.route('/user/<name>')
-def user(name):
-    return render_template('user.html', name=name)
+    def __repr__(self):
+        return f'<Role {self.name}>'
+
+class User(db.Model):
+    __tablename__ = 'users' # name of the table
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(64), unique=True, index=True)
+
+    def __repr__(self):
+        return f'<Role {self.username}>'
+
+class NameForm(FlaskForm):
+    name = StringField('What is your name?', validators=[DataRequired()])
+    submit = SubmitField('Submit')
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -21,3 +45,18 @@ def page_not_found(e):
 @app.errorhandler(500)
 def internal_server_error(e):
     return render_template('500.html'), 500
+
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    form = NameForm()
+    if form.validate_on_submit():
+        old_name = session.get('name') # get the name from the session
+        if old_name is not None and old_name != form.name.data: # check if the name has changed
+            flash('Looks like you have changed your name!')
+        session['name'] = form.name.data
+        return redirect(url_for('index'))
+    return render_template('index.html', form=form, name=session.get('name'))
+
+@app.route('/user/<name>')
+def user(name):
+    return render_template('user.html', name=name)
