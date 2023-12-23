@@ -1,5 +1,7 @@
+import BoredomJar from './BoredomJar';
+
 function App() {
-   return <div className="App">App</div>;
+   return <BoredomJar />;
 }
 
 export default App;
