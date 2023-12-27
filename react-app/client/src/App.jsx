@@ -1,7 +1,13 @@
+import AppNav from './AppNav';
 import BoredomJar from './BoredomJar';
 
 function App() {
-   return <BoredomJar />;
+   return (
+      <>
+         <AppNav />
+         <BoredomJar />
+      </>
+   );
 }
 
 export default App;
