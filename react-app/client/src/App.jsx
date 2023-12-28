@@ -1,12 +1,22 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import AppNav from './AppNav';
 import BoredomJar from './BoredomJar';
 
 function App() {
    return (
-      <>
-         <AppNav />
-         <BoredomJar />
-      </>
+      <BrowserRouter>
+         <Routes>
+            <Route
+               path="/"
+               element={
+                  <>
+                     <AppNav />
+                     <BoredomJar />
+                  </>
+               }
+            />
+         </Routes>
+      </BrowserRouter>
    );
 }
 

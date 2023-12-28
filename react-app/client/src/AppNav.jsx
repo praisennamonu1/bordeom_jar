@@ -1,5 +1,5 @@
 function AppNav() {
-   return <div>AppNav</div>;
+   return <h1>BoredomJar</h1>;
 }
 
 export default AppNav;
