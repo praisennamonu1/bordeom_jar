@@ -1,21 +1,19 @@
-import { useState } from 'react';
-import activities from './activity.json';
-import './BoredomJar.css';
+import { Link } from 'react-router-dom';
+import './LandingPage.css';
 import quoteImage from './assets/quote-image.jpg';
 
-function BoredomJar() {
-   const [activity, setActivity] = useState(' ');
-
-   function randomActivity() {
-      const randomIndex = Math.floor(
-         Math.random() * activities.activities.length
-      );
-      const randomActivity = activities.activities[randomIndex];
-      setActivity(randomActivity);
-   }
-
+function LandingPage() {
    return (
       <div className="container">
+         <div className="cta">
+            <p className="cta-text">
+               Do you get <span>bored often</span> and resort to doing things
+               that end up dulling your mind?
+            </p>
+            <Link to="/boredom-jar" title="Use Boredom Jar">
+               <button className="cta-button">Use Boredom Jar</button>
+            </Link>
+         </div>
          <div className="quote-container">
             <p className="quote">
                If you use <span>high dopamine stuff</span> to solve your{' '}
@@ -40,11 +38,8 @@ function BoredomJar() {
                </a>
             </div>
          </div>
-         <p>Let's do something!</p>
-         <button onClick={randomActivity}>Pick an activity</button>
-         <p className="activity">{activity}</p>
       </div>
    );
 }
 
-export default BoredomJar;
+export default LandingPage;

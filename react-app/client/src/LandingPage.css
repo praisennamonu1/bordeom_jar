@@ -1,0 +1,94 @@
+.container {
+   margin-top: 20px;
+   padding: 20px;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.quote-container {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 50%; /* Adjusted width for responsiveness */
+   max-width: 600px; /* Added max-width for larger screens */
+   background-color: #f5f5f5;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px;
+}
+
+.quote {
+   font-size: 1.2rem;
+   font-weight: 400;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.speaker-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: auto;
+}
+
+.speaker-image {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+
+.speaker-name {
+   font-size: 1rem;
+   font-weight: 400;
+   color: #333;
+}
+
+.cta {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 90%;
+   max-width: 900px;
+   height: auto;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px;
+}
+
+.cta-text {
+   font-size: 2rem;
+   font-weight: 500;
+   color: #333;
+}
+
+.cta-button {
+   font-size: 1rem;
+   font-family: inherit;
+   font-weight: 400;
+   color: #fff;
+   margin-bottom: 20px;
+   background-color: #5fb49c;
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+   padding: 15px;
+   border: none;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+.cta-button:hover {
+   background-color: #4ea48e;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+   .speaker-container {
+      flex-direction: row;
+   }
+}
