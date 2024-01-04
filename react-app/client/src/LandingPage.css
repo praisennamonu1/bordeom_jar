@@ -1,72 +1,66 @@
-.container {
-   margin-top: 20px;
-   padding: 20px;
+.lp-container {
+   background: linear-gradient(rgba(0, 0, 0, 0) 100%, #000),
+      url('./assets/landing-page-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
    height: 100vh;
    display: flex;
    flex-direction: column;
-   align-items: center;
+   justify-content: space-between;
 }
 
-.quote-container {
-   text-align: center;
+header,
+footer {
    display: flex;
-   flex-direction: column;
+   justify-content: space-between;
    align-items: center;
-   justify-content: center;
-   width: 50%; /* Adjusted width for responsiveness */
-   max-width: 600px; /* Added max-width for larger screens */
-   background-color: #f5f5f5;
-   border-radius: 10px;
-   padding: 20px;
-   margin: 20px;
+   padding: 10px;
 }
 
-.quote {
-   font-size: 1.2rem;
-   font-weight: 400;
-   color: #333;
-   margin-bottom: 20px;
+.logo-text {
+   font-family: Pacifico, cursive;
+   font-size: 1.5rem;
+   text-decoration: none;
+   color: #fffbfa;
 }
 
-.speaker-container {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 100%;
-   height: auto;
+.login {
+   color: #fffbfa;
+   text-decoration: none;
+   transition: all 0.3s ease-in;
 }
-
-.speaker-image {
-   width: 50px;
-   height: 50px;
-   border-radius: 50%;
-   margin-right: 10px;
-}
-
-.speaker-name {
-   font-size: 1rem;
-   font-weight: 400;
-   color: #333;
+.login:hover {
+   text-decoration-line: underline;
+   text-decoration-color: #d86048;
+   transition: text-decoration-color 0.3s ease-in;
+   color: #d86048;
 }
 
 .cta {
-   text-align: center;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   justify-content: center;
    width: 90%;
    max-width: 900px;
    height: auto;
-   border-radius: 10px;
-   padding: 20px;
-   margin: 20px;
+   margin-left: 300px;
 }
 
-.cta-text {
-   font-size: 2rem;
-   font-weight: 500;
-   color: #333;
+.cta-text > div {
+   font-family: cocogoose, kanit, sans-serif;
+   font-size: 3rem;
+   font-weight: 400;
+   text-align: left;
+   line-height: 3rem;
+   color: #fffbfa;
+}
+
+.cta-text > p {
+   font-family: 'DM Serif Display', serif;
+   text-align: left;
+   font-size: 1.5rem;
+   font-weight: 400;
+   color: #d86048;
+   margin: 20px 0 10px;
 }
 
 .cta-button {
@@ -74,21 +68,44 @@
    font-family: inherit;
    font-weight: 400;
    color: #fff;
-   margin-bottom: 20px;
-   background-color: #5fb49c;
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   padding: 15px;
+   background-color: #333;
+   padding: 10px 20px 10px 20px;
    border: none;
    cursor: pointer;
    transition: all 0.3s ease;
 }
 .cta-button:hover {
-   background-color: #4ea48e;
+   background-color: #33333373;
+}
+
+footer > nav > ul {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+footer > p {
+   font-size: 0.8rem;
+   font-weight: 400;
+   color: #fffbfa;
+}
+
+footer > nav > ul > li > a {
+   font-size: 0.8rem;
+   font-weight: 400;
+   text-decoration: none;
+   margin: 0 7px;
 }
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
-   .speaker-container {
-      flex-direction: row;
+   .cta {
+      margin-left: 20px;
+   }
+   footer > nav > ul {
+      flex-direction: column;
    }
 }

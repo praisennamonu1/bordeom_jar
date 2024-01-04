@@ -1,0 +1,41 @@
+.quote-container {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 50%;
+   max-width: 600px;
+   background-color: #f5f5f5;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px;
+}
+
+.quote {
+   font-size: 1.2rem;
+   font-weight: 400;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+.speaker-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   height: auto;
+}
+
+.speaker-image {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   margin-right: 10px;
+}
+
+.speaker-name {
+   font-size: 1rem;
+   font-weight: 400;
+   color: #333;
+}

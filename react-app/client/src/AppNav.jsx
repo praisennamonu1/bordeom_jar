@@ -12,7 +12,7 @@ function AppNav() {
       <nav className="nav-container">
          <h1 className="title">Boredom </h1>
          <Link to="/">
-            <img className="logo" src={logo} alt="" title="Home" />
+            <img className="logo-image" src={logo} alt="" title="Home" />
          </Link>
       </nav>
    );

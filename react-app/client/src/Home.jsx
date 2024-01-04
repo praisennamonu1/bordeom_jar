@@ -14,7 +14,7 @@ function Home() {
    }
 
    return (
-      <div className="container">
+      <div className="home-container">
          <p className="quote">
             Choose an activity that's <span>not high dopamine</span>
          </p>

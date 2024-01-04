@@ -13,13 +13,10 @@
    margin: 0;
 }
 
-.logo {
-   height: 50px;
-   width: 50px;
-   margin: 0 10px;
+.logo-image {
+   height: 35px;
+   width: 35px;
    border-radius: 50%;
-   border: 1px solid #ccc;
-   background-color: #fff;
    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
    overflow: hidden;
    position: relative;
