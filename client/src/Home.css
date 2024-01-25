@@ -1,0 +1,69 @@
+/* Common styles for all screen sizes */
+.home-container {
+   background: linear-gradient(rgba(0, 0, 0, 0) 100%, #000),
+      url('./assets/home-bg.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   transition: all 0.3s ease-in;
+}
+
+.home-container > .cta {
+   margin-top: 100px;
+}
+
+.cta-text > .set-activities {
+   font-family: 'DM Serif Display', serif;
+   text-align: left;
+   font-size: 0.8rem;
+   font-weight: 300;
+   color: #fff;
+   margin-top: 20px;
+   transition: all 0.3s ease-in;
+}
+
+.cta-text > .set-activities > span > a {
+   color: #fff;
+   text-decoration: underline;
+   transition: all 0.3s ease-in;
+}
+
+.activity.hidden {
+   display: none;
+   color: #fff;
+}
+
+.activity.visible {
+   display: block;
+   color: #fff;
+}
+
+input {
+   font-family: inherit;
+   font-size: 1rem;
+   width: auto;
+   padding: 12px 20px;
+   margin: 50px 0;
+   box-sizing: border-box;
+   cursor: default;
+}
+
+input::placeholder {
+   color: #837c7c;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+   /* Adjustments for smaller screens */
+   .cta-text > .set-activities {
+      font-size: 0.7rem;
+      /* Add any other adjustments as needed */
+   }
+
+   input {
+      font-size: 0.9rem;
+      /* Add any other adjustments as needed */
+   }
+}

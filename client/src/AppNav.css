@@ -1,9 +1,8 @@
-.nav-container {
-   padding: 20px;
+.nav-container > header {
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
-   background: #333;
+   padding: 10px;
 }
 
 .title {
@@ -16,8 +15,6 @@
 .logo-image {
    height: 35px;
    width: 35px;
-   border-radius: 50%;
-   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
    overflow: hidden;
    position: relative;
    display: inline-block;

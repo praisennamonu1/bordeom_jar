@@ -13,7 +13,7 @@ function App() {
                path="*"
                element={
                   <>
-                     <AppNav />
+                     {/* <AppNav /> */}
                      <Routes>
                         <Route path="/boredom-jar" element={<Home />} />
                      </Routes>
